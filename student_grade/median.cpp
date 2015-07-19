@@ -1,3 +1,5 @@
+//this function calculates the median of the doubles
+
 #include<vector>
 #include<algorithm>
 #include<stdexcept>

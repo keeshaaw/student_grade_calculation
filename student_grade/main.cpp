@@ -1,3 +1,11 @@
+/* A console program that calculates grades of multiple students in a class based on
+ * marks in threes components namely
+ * 1. Markes in multiple homeworks per student and has a weightage 40% to the total grade
+ * 		(median of the homework grades is taken into account
+ * 2. Markes in midterm and has a weightage of 20%
+ * 3. Markes in final and has a weightahe of 40%
+ */
+
 #include<iostream>
 #include"student_info.h"
 #include"grade.h"

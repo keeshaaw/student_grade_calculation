@@ -5,6 +5,7 @@
 #include<vector>
 #include<string>
 
+//a data structure to hold all the information of a student
 struct student_info {
 	std::string name;
 	double midterm, final;

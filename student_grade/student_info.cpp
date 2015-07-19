@@ -1,17 +1,16 @@
+
 #include"student_info.h"
-//#include<iostream>
-//#include<vector>
 
 using std::istream;
 using std::vector;
 
-
-
+//compare function to be used for sorting students in dictionary order
 bool compare(const student_info& x, const student_info& y)
 {
 	return x.name < y.name;
 }
 
+//two overloaded function to read data from the user
 istream& read(istream& is, student_info& s)
 {
 	is >> s.name >> s.final >> s.midterm;

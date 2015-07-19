@@ -1,3 +1,7 @@
+/*this function takes a vector of student_info type and returns
+the failed students (grade < 60) and also modify the input vector
+to only contain passed students*/
+
 #include"student_info.h"
 #include<list>
 #include"fail.h"
