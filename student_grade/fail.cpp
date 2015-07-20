@@ -16,7 +16,7 @@ list<student_info> extract_fail(list<student_info>& students)
 
 	while(iter != students.end())
 	{
-		if(grade(*iter) < 60)
+		if(is_fail(iter->final_grade))
 		{
 			fail.push_back(*iter);
 			iter = students.erase(iter);
@@ -26,4 +26,9 @@ list<student_info> extract_fail(list<student_info>& students)
 			++iter;
 	}
 	return fail;
+}
+
+bool is_fail(const double& final_grade)
+{
+	return final_grade < 60;
 }
