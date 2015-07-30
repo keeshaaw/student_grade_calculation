@@ -16,7 +16,7 @@ list<student_info> extract_fail(list<student_info>& students)
 
 	while(iter != students.end())
 	{
-		if(is_fail(iter->final_grade))
+		if(is_fail(iter->final_grade()))
 		{
 			fail.push_back(*iter);
 			iter = students.erase(iter);

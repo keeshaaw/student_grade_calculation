@@ -1,5 +1,6 @@
 
 #include"student_info.h"
+#include"grade.h"
 
 using std::istream;
 using std::vector;
@@ -7,14 +8,14 @@ using std::vector;
 //compare function to be used for sorting students in dictionary order
 bool compare(const student_info& x, const student_info& y)
 {
-	return x.name < y.name;
+	return x.name() < y.name();
 }
 
 //two overloaded function to read data from the user
-istream& read(istream& is, student_info& s)
+istream& student_info::read(istream& is)
 {
-	is >> s.name >> s.final >> s.midterm;
-	read_hw(is,s.homework);
+	is >> n >> final >> midterm;
+	read_hw(is, homework);
 
 	return is;
 }
@@ -33,3 +34,16 @@ istream& read_hw(istream& in, vector<double>& hw)
 	}
 	return in;
 }
+
+//definition of member function grade()
+double student_info::grade() const
+{
+	return ::grade(final, midterm, homework);
+}
+
+
+//constructor definition
+
+student_info::student_info(): midterm(0), final(0), FinalGrade(0) {}
+
+student_info::student_info(istream& is) {read(is); }
